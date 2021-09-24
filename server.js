@@ -17,6 +17,11 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populate",
  useFindAndModift: false 
 });
 
+// mongoose.connect("mongodb://localhost/populate", 
+// { useNewUrlParser: true,
+//  useFindAndModift: false 
+// });
+
 app.use(require("./routes/api/js"))
 
 app.listen(PORT, () => {
