@@ -19,7 +19,8 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-app.use(require('./routes'));
+app.use(require('./routes/api'));
+app.use(require('./routes/html'));
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
